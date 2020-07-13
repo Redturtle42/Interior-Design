@@ -1,0 +1,112 @@
+@import url('https://fonts.googleapis.com/css2?family=Great+Vibes&family=Montserrat:wght@100;200;300;400;500&display=swap');
+:root {
+    --second-color: #eee4e1;
+    --green-color: #218078;
+    --dark-color: rgb(58, 57, 57);
+}
+
+footer {
+    grid-column: span 12;
+    grid-row: 6/9;
+}
+
+.form-map-container {
+    max-width: 1200px;
+    margin: 20px auto;
+    display: grid;
+    grid-template-columns: repeat(12, 1fr);
+    grid-template-rows: repeat(1, 1fr);
+    align-items: center;
+    text-align: center;
+}
+
+/* ----------- MAP -----------*/
+
+.main-page-map {
+    grid-column: span 12;
+    padding: 10px;
+}
+
+.main-page-map iframe {
+    padding: 10px;
+    width: 300px;
+    height: 200px;
+    margin: 10px;
+    border-radius: var(--border-radius);
+    filter: grayscale(80%);
+}
+
+/* ----------- BUTTON -----------*/
+
+.page-bottom {
+    grid-column: span 12;
+    background-color: var(--dark-color);
+    width: 100%;
+    margin: 0 auto;
+    padding: 0;
+    display: flex;
+    justify-content: space-evenly;
+    flex-wrap: wrap;
+    align-items: center;
+    font-size: 0.9rem;
+}
+
+.mycontact-container {
+    text-align: left;
+}
+
+.mycontact-container ul, .social-media-container ul {
+    margin: 0;
+    padding: 0;
+}
+
+.mycontact-container ul li, .social-media-container ul li {
+    list-style: none;
+    color: var(--second-color);
+    padding: 10px;
+    margin: 15px;
+}
+
+.social-media-container ul li {
+    display: inline-block;
+}
+
+.mycontact-container ul li a, .social-media-container ul li a {
+    text-decoration: none;
+    color: var(--second-color);
+}
+
+.fab {
+    font-size: 1.2rem;
+    color: var(--green-color);
+}
+
+.mycontact-container p {
+    display: inline-block;
+}
+
+.copyright {
+    text-align: center;
+    background-color: var(--dark-color);
+    color: var(--second-color);
+    font-size: 0.7rem;
+}
+
+/* ----------- MEDIA QUERY -----------*/
+
+@media only screen and (min-width:768px) {
+    .main-page-map {
+        grid-column: span 5;
+    }
+}
+
+@media only screen and (min-width:1024px) {
+    .header-text {
+        height: 280px;
+        top: 50%;
+    }
+    .main-page-map iframe {
+        width: 400px;
+        height: 300px;
+    }
+}

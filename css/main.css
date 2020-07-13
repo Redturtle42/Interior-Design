@@ -1,0 +1,123 @@
+:root {
+    --second-color: #eee4e1;
+    --third-color: #e7d8c9;
+    --dark-color: rgb(58, 57, 57);
+}
+
+main {
+    grid-column: span 12;
+    grid-row: 3/6;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+/* ----------- ABOUT -----------*/
+
+.about-me-container {
+    display: grid;
+    grid-template-columns: repeat(12, 1fr);
+    grid-template-rows: repeat(1, 1fr);
+    align-items: center;
+    margin: 20px 10px;
+    text-align: center;
+}
+
+.about-me-text {
+    grid-column: span 12;
+    padding: 5px 10px;
+    text-align: justify;
+    color: var(--dark-color);
+}
+
+.about-me-icon {
+    grid-column: span 12;
+    background-image: url(../img/cube.svg);
+    background-position: center;
+    background-size: contain;
+    background-repeat: no-repeat;
+    height: 50px;
+    width: 100%;
+    padding: 5px;
+}
+
+.about-me-icon:nth-last-of-type(1) {
+    -webkit-transform: scaleX(-1);
+    transform: scaleX(-1);
+}
+
+/* ----------- PARALLAX -----------*/
+
+.parallax-img {
+    background-image: linear-gradient( var(--second-color), rgba(0, 0, 0, 0.1)), url(../img/round-brown-wooden-5-piece-dining-set-in-room-1571463\(1\).jpg);
+    height: 75vh;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    background-size: cover;
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+}
+
+/* ----------- FLEXBOX -----------*/
+
+.about-me-card-container {
+    grid-column: span 12;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    position: relative;
+    color: var(--dark-color);
+}
+
+.about-me-card {
+    grid-column: span 12;
+    width: 100%;
+    height: 100%;
+    border-right: 1px solid var(--third-color);
+    border-bottom: 1px solid var(--third-color);
+    margin: 10px;
+    padding: 5px;
+}
+
+.about-me-card svg.icon {
+    height: 50px;
+    width: 50px;
+    fill: var(--green-color);
+    text-align: center;
+}
+
+.about-me-card h4, p {
+    margin: 0;
+    padding: 10px;
+}
+
+.about-me-card p {
+    text-align: center;
+}
+
+/* ----------- MEDIA QUERY -----------*/
+
+@media only screen and (min-width: 768px) {
+    .about-me-text {
+        grid-column: span 6;
+    }
+    .about-me-icon {
+        grid-column: span 3;
+        height: 80px;
+    }
+    .about-me-card {
+        width: 45%;
+        margin-top: 10%;
+        font-size: 0.9rem;
+    }
+    .about-me-card p {
+        text-align: left;
+    }
+}
+
+@media only screen and (min-width: 1024px) {
+    .about-me-card {
+        width: 20%;
+    }
+}
