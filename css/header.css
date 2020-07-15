@@ -25,7 +25,6 @@ body {
     grid-template-rows: repeat(1, 1fr);
     font-family: 'Montserrat', sans-serif;
     background-color: var(--second-color);
-    background-color: var(--second-color);
     background-color: #b2967d;
     background-color: #eeeeee;
     background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='100%25' height='100%25' viewBox='0 0 1600 800'%3E%3Cg %3E%3Cpolygon fill='%23edeae7' points='1600 160 0 460 0 350 1600 50'/%3E%3Cpolygon fill='%23ebe5df' points='1600 260 0 560 0 450 1600 150'/%3E%3Cpolygon fill='%23eae1d8' points='1600 360 0 660 0 550 1600 250'/%3E%3Cpolygon fill='%23e8dcd0' points='1600 460 0 760 0 650 1600 350'/%3E%3Cpolygon fill='%23e7d8c9' points='1600 800 0 800 0 750 1600 450'/%3E%3C/g%3E%3C/svg%3E");
@@ -48,7 +47,7 @@ section {
 
 section h2 {
     padding: 0;
-    margin: 0 30px 0 50px;
+    margin: 0 50px 0 50px;
     font-family: 'Great Vibes', cursive;
     color: var(--green-color);
     font-size: 2.2rem;
@@ -188,11 +187,12 @@ header {
 .main-bg-img {
     grid-column: span 12;
     grid-row: 2/3;
-    background-image: url(../img/interior-design-of-a-house-1571460\(1\).jpg);
+    background-image: url(../img/5-pic.jpg);
     background-position: center;
     background-size: cover;
     width: 100%;
     height: 100vh;
+    margin-top: -50px;
     position: relative;
 }
 
@@ -200,19 +200,39 @@ header {
     font-family: 'Great Vibes', cursive;
     text-align: center;
     color: var(--dark-color);
-    font-size: 2.2rem;
-    letter-spacing: 3px;
+    font-size: 1.9rem;
+    letter-spacing: 2px;
+    margin-top: 50px
 }
 
 .header-text {
     display: block;
-    width: 90%;
+    width: 100%;
     height: 200px;
     background-color: #e7d8c982;
     position: absolute;
     top: 45%;
     left: 50%;
     transform: translate(-50%, -50%);
+    animation: background-gradient 10s;
+    animation-iteration-count: infinite;
+    animation-timing-function: ease-in-out;
+    background-image: radial-gradient( circle at 50% 50%, #b2967d80, #e7d8c982);
+}
+
+@keyframes background-gradient {
+    0% {
+        background-color: #eee4e180;
+    }
+    25% {
+        background-color: #eee4e180;
+    }
+    50% {
+        background-color: #21807880;
+    }
+    100% {
+        background-color: #eee4e180;
+    }
 }
 
 /* ----------- CTA-BTN -----------*/
@@ -223,7 +243,7 @@ header {
     top: 70%;
     left: 50%;
     transform: translate(-50%, -50%);
-    padding: 6px;
+    padding: 4px;
     border: none;
     border-radius: var(--border-radius);
     background-color: var(--green-color);
@@ -234,10 +254,10 @@ header {
 .cta-btn button a {
     text-decoration: none;
     color: var(--first-color);
-    letter-spacing: 0.4rem;
-    font-size: 1.3rem;
+    letter-spacing: 0.2rem;
+    font-size: 1.2rem;
     font-family: 'Great Vibes', cursive;
-    padding: 8px;
+    padding: 9px;
 }
 
 .cta-btn button a:hover {
@@ -265,8 +285,9 @@ header {
     .nav-bar ul li a {
         padding: 7px 2px 4px 2px;
         font-weight: 500;
-        font-size: 0.7rem;
+        font-size: 0.9rem;
         margin: 0 5px;
+        letter-spacing: 0;
     }
     .header-text {
         height: 250px;
@@ -276,6 +297,15 @@ header {
         top: 30%;
         font-size: 3.5rem;
         letter-spacing: 3px;
+        margin-top: 40px;
+    }
+    .cta-btn button {
+        top: 70%;
+    }
+    .cta-btn button a {
+        letter-spacing: 0.3rem;
+        font-size: 1.4rem;
+        padding: 10px;
     }
     section h2 {
         font-size: 2.2rem;
@@ -286,5 +316,8 @@ header {
     .header-text {
         height: 280px;
         top: 50%;
+    }
+    .cta-btn button {
+        top: 70%;
     }
 }

@@ -1,3 +1,5 @@
+/* ---------- NAV-BAR ---------- */
+
 function closeNav() {
     document.getElementById("myNav").style.width = "0%";
 }
@@ -8,14 +10,14 @@ function openNav() {
 var zoomImg = function () {
     var clone = this.cloneNode();
     clone.classList.remove("zoomD");
-
     var lb = document.getElementById("lb-img");
     lb.innerHTML = "";
     lb.appendChild(clone);
-
     lb = document.getElementById("lb-back");
     lb.classList.add("show");
 };
+
+/* ---------- FULL-SIZE PICTURE ---------- */
 
 window.addEventListener("load", function () {
     var images = document.getElementsByClassName("zoomD");
@@ -24,15 +26,14 @@ window.addEventListener("load", function () {
             img.addEventListener("click", zoomImg);
         }
     }
-
     document.getElementById("lb-back").addEventListener("click", function () {
         this.classList.remove("show");
     })
 });
 
-// Detect request animation frame
+/* ---------- FADE-IN TO REFRESH ---------- */
+
 var scroll = window.requestAnimationFrame ||
-    // IE Fallback
     function (callback) { window.setTimeout(callback, 1000 / 60) };
 var elementsToShow = document.querySelectorAll('.show-on-scroll');
 
@@ -45,10 +46,5 @@ function loop() {
             element.classList.remove('is-visible');
         }
     });
-
     scroll(loop);
 }
-
-
-
-

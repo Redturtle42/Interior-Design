@@ -55,6 +55,10 @@ footer {
     text-align: left;
 }
 
+.mycontact-container p {
+    font-size: 0.8rem;
+}
+
 .mycontact-container ul, .social-media-container ul {
     margin: 0;
     padding: 0;
@@ -63,8 +67,8 @@ footer {
 .mycontact-container ul li, .social-media-container ul li {
     list-style: none;
     color: var(--second-color);
-    padding: 10px;
-    margin: 15px;
+    padding: 5px;
+    margin: 5px;
 }
 
 .social-media-container ul li {
@@ -89,7 +93,11 @@ footer {
     text-align: center;
     background-color: var(--dark-color);
     color: var(--second-color);
-    font-size: 0.7rem;
+    border-top: 1px solid #eee4e110;
+}
+
+.copyright p {
+    font-size: 0.6rem;
 }
 
 /* ----------- MEDIA QUERY -----------*/
@@ -98,13 +106,19 @@ footer {
     .main-page-map {
         grid-column: span 5;
     }
+    .mycontact-container ul li, .social-media-container ul li {
+        padding: 10px;
+        margin: 5px;
+    }
+    .mycontact-container p {
+        font-size: 0.9rem;
+    }
+    .copyright p {
+        font-size: 0.7rem;
+    }
 }
 
 @media only screen and (min-width:1024px) {
-    .header-text {
-        height: 280px;
-        top: 50%;
-    }
     .main-page-map iframe {
         width: 400px;
         height: 300px;

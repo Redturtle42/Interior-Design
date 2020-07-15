@@ -4,6 +4,7 @@
     --third-color: #e7d8c9;
     --fifth-color: #b2967d;
     --green-color: #218078;
+    --border-radius: 2px;
 }
 
 p, label, option {
@@ -11,21 +12,16 @@ p, label, option {
 }
 
 .main-bg-img {
-    height: 75vh;
-    background-image: url(../img/beige-couch-1571457\(1\).jpg);
+    background-image: url(../img/6-pic.jpg);
 }
 
 .main-bg-img h1 {
-    color: var(--third-color);
-}
-
-.header-text {
-    width: 90%;
-    background-color: #21807840;
+    margin-top: 50px
 }
 
 .project-page h2 {
-    margin: 0;
+    margin: 0 20px;
+    font-size: 1.8rem;
 }
 
 /* ----------- PROJECT -----------*/
@@ -35,7 +31,7 @@ p, label, option {
 }
 
 .project-container img {
-    height: 300px;
+    height: 280px;
 }
 
 .project-container:nth-child(1) {
@@ -66,6 +62,7 @@ p, label, option {
     margin: 20px auto;
     background-color: var(--fifth-color);
     color: var(--second-color);
+    border-radius: var(--border-radius);
 }
 
 .project-type:nth-child(2) {
@@ -82,11 +79,19 @@ p, label, option {
     text-align: center;
 }
 
+.project-main-img img, .project-main-img video {
+    border-radius: var(--border-radius);
+    -webkit-box-shadow: 50px 50px 156px -136px rgba(231, 216, 201, 0.4);
+    -moz-box-shadow: 50px 50px 156px -136px rgba(231, 216, 201, 0.4);
+    box-shadow: 50px 50px 156px -136px rgba(231, 216, 201, 0.4);
+}
+
 .project-text ul {
     margin: 0 auto;
     display: flex;
     flex-wrap: wrap;
     padding: 0;
+    text-align: center;
     justify-content: space-around;
 }
 
@@ -106,6 +111,7 @@ p, label, option {
     .project-container img {
         height: 450px;
     }
+    .project-page h2 {
+        font-size: 2.2rem;
+    }
 }
-
-@media only screen and (min-width:1024px) {}
